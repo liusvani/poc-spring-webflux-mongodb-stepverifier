@@ -25,31 +25,31 @@ El microservicio Pedido se encarga de gestionar pedidos, provee un API encargado
 
 ## How to Run
 
-1. Clone the repository:
+1. Clonar el repository:
    ```bash
    git clone https://github.com/liusvani/poc-spring-webflux-mongodb-stepverifier.git
    ```
 
-2. Navigate to the project directory:
+2. Navegar hasta el directorio del proyecto:
    ```bash
-   cd ms-pedido
+   cd poc-spring-webflux-mongodb-stepverifier
    ```
 
-3. Build the project:
+3. Construye el proyecto:
    ```bash
    ./mvnw clean install
    ```
 
-4. Run the application:
+4. Ejecuta la aplicación:
    ```bash
    ./mvnw spring-boot:run
    ```
 
-5. The service will be available at `http://localhost:8080`.
+5. El servicio estará disponible en la dirección `http://localhost:8080`.
 
 ---
 
-## Example Payloads
+## Ejemplo Payloads
 
 ### Pedido Payloads
 #### Crear Pedido
