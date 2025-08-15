@@ -7,7 +7,6 @@ import com.ms_pedido.pedido.infrastructure.adapter.dto.PedidoRequestDto;
 import com.ms_pedido.pedido.infrastructure.adapter.dto.PedidoResponseDto;
 
 import java.util.List;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 public class PedidoMapper {
@@ -16,7 +15,6 @@ public class PedidoMapper {
 
         pedido.setUserId(dto.getUserId());
         pedido.setItems(dto.getItems());
-        pedido.setMontoTotal(dto.getMontoTotal());
         pedido.setDireccion(dto.getDireccion());
         pedido.setPagoEstado(dto.getPagoEstado());
         pedido.setPedidoEstado(dto.getPedidoEstado());
@@ -28,9 +26,9 @@ public class PedidoMapper {
 
         responseDto.setId(pedido.getId());
         responseDto.setUserId(pedido.getUserId());
-        responseDto.setMontoTotal(pedido.getMontoTotal());
         responseDto.setPagoEstado(pedido.getPagoEstado());
         responseDto.setPedidoEstado(pedido.getPedidoEstado());
+        responseDto.setCalcularMontoTotal(pedido.calcularMontoTotal());
 
         // Mapear items
         List<PedidoResponseDto.ItemPedidoDto> itemsDto = pedido.getItems().stream()

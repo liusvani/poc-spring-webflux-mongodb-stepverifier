@@ -17,7 +17,6 @@ public class PedidoResponseDto {
     private String id;
     private Long userId;
     //private List<ItemPedido> items;
-    private BigDecimal montoTotal;
     //private DireccionEnvio direccion;
     private EstadoPago pagoEstado;
     private EstadoPedido pedidoEstado;
@@ -26,6 +25,7 @@ public class PedidoResponseDto {
     public record DireccionEnvioDto(String calle, String ciudad, String pais, String codigoPostal) {}
     private List<ItemPedidoDto> items;
     private DireccionEnvioDto direccion;
+    private BigDecimal calcularMontoTotal;
 
     public PedidoResponseDto(String mensaje) {
         this.mensaje = mensaje;

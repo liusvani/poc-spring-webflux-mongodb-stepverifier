@@ -23,11 +23,6 @@ public class PedidoRequestDto {
     @Valid
     private List<ItemPedido> items;
 
-    @NotNull(message = "El monto total es obligatorio")
-    @Positive
-    private BigDecimal montoTotal;
-
-
     @NotNull(message = "La dirección de envío es obligatorio.")
     private DireccionEnvio direccion;
 

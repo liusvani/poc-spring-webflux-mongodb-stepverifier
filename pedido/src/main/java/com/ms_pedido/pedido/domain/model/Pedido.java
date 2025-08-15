@@ -37,10 +37,6 @@ public class Pedido {
     @Size(min = 1, message = "Debe haber al menos un ítem en el pedido")
     private List<ItemPedido> items;
 
-    @NotNull
-    @Positive
-    private BigDecimal montoTotal;
-
     @Field(targetType = FieldType.STRING) //serialicen como string
     @NotNull(message = "La dirección de envío no puede ser nula")
     private DireccionEnvio direccion;

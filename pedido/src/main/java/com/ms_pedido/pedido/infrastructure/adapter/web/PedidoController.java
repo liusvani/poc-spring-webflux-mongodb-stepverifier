@@ -30,13 +30,17 @@ public class PedidoController {
     private final PedidoService pedidoService;
 
     private final Validator validator;
-
+    /*@PostConstruct
+    public void init() {
+        System.out.println("Validator class: " + validator.getClass().getName());
+    }*/
 
     @PostMapping
     public Mono<ResponseEntity<MensajeRespuesta>> crearPedido(@RequestBody Mono<PedidoRequestDto> dtoMono) {
         return dtoMono
                 .flatMap(dto -> {
                     Set<ConstraintViolation<PedidoRequestDto>> violaciones = validator.validate(dto);
+                     //Mono.error(new ValidationException("Campo X es obligatorio"));
                     if (!violaciones.isEmpty()) {
                         String errores = violaciones.stream()
                                 .map(v -> v.getPropertyPath() + ": " + v.getMessage())
