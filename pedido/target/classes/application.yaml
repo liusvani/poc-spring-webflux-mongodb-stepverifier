@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pedido
+
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/pedido_db
+      database: pedido_db

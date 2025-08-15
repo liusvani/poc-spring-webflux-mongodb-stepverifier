@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: pedido
+#modificar la uri con user y pass reales
+  data:
+    mongodb:
+      uri: mongodb://usuario:contraseña@localhost:27017/pedido_db
+      database: pedido_db
