@@ -23,7 +23,7 @@ El microservicio Pedido se encarga de gestionar pedidos, provee un API encargado
 | GET     | `/pedido`       | Listar pedidos.            |
 | DELETE  | `/pedido/{id}`  | Eliminar pedido por ID.    |
 
-## How to Run
+## Comó ejecutarlo
 
 1. Clonar el repository:
    ```bash
